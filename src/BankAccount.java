@@ -6,11 +6,9 @@ public class BankAccount {
         this.balance = startingAmount;
     }
 
-    //Taxed Withdrawal
+    //Tax Free Withdrawal
     public void withdraw(int amount) throws IllegalArgumentException {
-        int tax = (int) (amount * 0.05);
-        balance = (balance - amount);
-        balance = balance - tax;
+        balance = balance - amount;
     }
 
     public int getBalance() {

@@ -4,9 +4,11 @@ public class CheckingAccount extends BankAccount{
         super(startingAmount);
     }
 
-    //Tax Free Withdrawal
+    //Taxed Withdrawal
     @Override
     public void withdraw(int amount) {
-        balance = balance - amount;
+        int tax = (int) (amount * 0.05);
+        balance = (balance - amount);
+        balance = balance - tax;
     }
 }
